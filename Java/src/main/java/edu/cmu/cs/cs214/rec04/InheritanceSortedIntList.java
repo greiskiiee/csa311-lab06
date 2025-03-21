@@ -26,7 +26,7 @@ public class InheritanceSortedIntList extends SortedIntList {
     }
 
     @Override
-    public boolean addAll(IntegerList list) {  // Fix method signature
+    public boolean addAll(IntegerList list) {
         return super.addAll(list);
     }
 

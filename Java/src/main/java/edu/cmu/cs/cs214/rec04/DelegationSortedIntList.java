@@ -22,14 +22,8 @@ public class DelegationSortedIntList implements IntegerList {
 
     @Override
     public boolean addAll(IntegerList list) {
-        // this.totalAdded += list.size();
-        // return sortedList.addAll(list);
-
-        boolean changed = false;
-        for (int i = 0; i < list.size(); i++) {
-            changed |= this.add(list.get(i)); // Use add() to track totalAdded correctly
-        }
-        return changed;
+        this.totalAdded += list.size();
+        return sortedList.addAll(list);
     }
 
     @Override
