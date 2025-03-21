@@ -58,5 +58,4 @@ public interface IntegerList {
      */
     public int size();
 
-    public int getTotalAdded();
 }
