@@ -30,7 +30,6 @@ public class InheritanceSortedIntList extends SortedIntList {
         return super.addAll(list);
     }
 
-    @Override
     public int getTotalAdded() {
         return totalAdded;
     }
