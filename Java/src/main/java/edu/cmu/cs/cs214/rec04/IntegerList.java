@@ -33,8 +33,8 @@ public interface IntegerList {
     public int get(int index);
 
     /**
-     * Removes the first occurrence of the specified element from the list,
-     * if it is present (optional operation).
+     * Removes the first occurrence of the specified element from the list, if
+     * it is present (optional operation).
      *
      * @param num an integer to be removed from the list, if present
      * @return true if an element was removed as a result of this call
@@ -45,19 +45,18 @@ public interface IntegerList {
      * Removes from the list all of its elements that are contained in the
      * specified IntegerList.
      *
-     * @param list IntegerList containing elements to be removed from
-     * the list
+     * @param list IntegerList containing elements to be removed from the list
      * @return true if the list changed as a result of the call
      */
     public boolean removeAll(IntegerList list);
 
     /**
-     * Returns the number of elements in this list. If this list contains
-     * more than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.
+     * Returns the number of elements in this list. If this list contains more
+     * than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.
      *
      * @return number of elements in the list
      */
     public int size();
 
-
+    public int getTotalAdded();
 }

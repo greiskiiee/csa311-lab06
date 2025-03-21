@@ -8,6 +8,8 @@ package edu.cmu.cs.cs214.rec04;
  */
 public abstract class AbstractIntList implements IntegerList {
 
+    private int totalAdded = 0;
+
     /**
      * Adds the specified int to the list.
      *
@@ -17,9 +19,8 @@ public abstract class AbstractIntList implements IntegerList {
     public abstract boolean add(int num);
 
     /**
-     * Adds all of the elements of the IntegerList to the list.
-     * Calls add() on each element of list. Can be overwritten
-     * for more specific behavior.
+     * Adds all of the elements of the IntegerList to the list. Calls add() on
+     * each element of list. Can be overwritten for more specific behavior.
      *
      * @param list IntegerList containing elements to be added to the list
      * @return true if the list changed as a result of the call
@@ -28,8 +29,7 @@ public abstract class AbstractIntList implements IntegerList {
 
         boolean success = false;
 
-        for (int i = 0; i < list.size(); i++)
-        {
+        for (int i = 0; i < list.size(); i++) {
             success |= this.add(list.get(i));
         }
 
@@ -45,8 +45,8 @@ public abstract class AbstractIntList implements IntegerList {
     public abstract int get(int index);
 
     /**
-     * Removes the first occurrence of the specified element from the list,
-     * if it is present (optional operation).
+     * Removes the first occurrence of the specified element from the list, if
+     * it is present (optional operation).
      *
      * @param num an integer to be removed from the list, if present
      * @return true if an element was removed as a result of this call
@@ -57,15 +57,14 @@ public abstract class AbstractIntList implements IntegerList {
      * Removes from the list all of its elements that are contained in the
      * specified IntegerList.
      *
-     * @param list IntegerList containing elements to be removed from
-     * the list
+     * @param list IntegerList containing elements to be removed from the list
      * @return true if the list changed as a result of the call
      */
     public abstract boolean removeAll(IntegerList list);
 
     /**
-     * Returns the number of elements in this list. If this list contains
-     * more than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.
+     * Returns the number of elements in this list. If this list contains more
+     * than Integer.MAX_VALUE elements, returns Integer.MAX_VALUE.
      *
      * @return number of elements in the list
      */
